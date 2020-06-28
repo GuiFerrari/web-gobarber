@@ -33,10 +33,19 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/pages/**/*.tsx",
+      "src/components/**/*.tsx",
+      "src/hooks/*.tsx",
+      "!src/hooks/index.tsx"
+    ]
   },
   "browserslist": {
     "production": [
@@ -53,6 +62,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@testing-library/react-hooks": "^3.3.0",
     "@testing-library/user-event": "^7.1.2",
     "@types/axios": "^0.14.0",
     "@types/jest": "^24.0.0",
@@ -75,6 +85,7 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "prettier": "^2.0.4",
     "react-app-rewired": "^2.1.5",
+    "react-test-renderer": "^16.13.1",
     "ts-jest": "^25.4.0"
   }
 }
